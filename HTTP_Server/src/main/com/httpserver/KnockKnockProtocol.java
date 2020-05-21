@@ -1,4 +1,4 @@
-package com.httpserver;
+package main.com.httpserver;
 
 import java.io.*;
 import java.net.*;
