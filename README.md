@@ -1,4 +1,4 @@
-# Primer proyecto programado #
+# Servidor HTTP con principios SOLID de POO #
 
 El proyecto consiste en diseñar y desarrollar un servidor web capaz de comunicarse con navegadores a través del protocolo HTTP.
 
@@ -10,7 +10,28 @@ El proyecto consiste en diseñar y desarrollar un servidor web capaz de comunica
 
 * Diseñar los componentes para un software de complejidad media aplicando los principios de diseño SOLID.
 
-## Objetivos de curso ##
+# Consideraciones para compilación y ejecución del Código
+* Utilizar sistema operativo _Linux_
+* El programa recibe 3 argumentos por parámetro `<numeroPuerto> <raizArchivosDeRecurso> <rutaArchivoExtensionesMime>`
+* Comando para compilación
+```sh
+$ ./gradle clean build
+```
+* Comando para ejecución
+```sh
+$ ./gradlew run --args <numeroPuerto> <raizArchivosDeRecurso> <rutaArchivoExtensionesMime>
+```
+* Cuando se requiera finalizar la compilación presionar `CTRL + T`
+* Compilación y ejecución en **IntelliJ IDEA** de **JetBrains** 
+    * Presionar `ALT + SHIFT + F10`
+    * Seleccionar `Edit Configurations`
+    * En la sección de texto `Program arguments` ingresar los 3 parámetros para ejecución
+
+
+## Diagrama de Clases
+![Diagrama Clases HTTP Server SOLID](https://github.com/IC-6821/ic-6821-2020i-p1-los-solidos/blob/developer/Diagramas/Diagrama_de_Clases.png)
+
+## Objetivos ##
 
 * Aplicar técnicas y herramientas orientadas a objetos para la modelación del diseño de software.
 
@@ -18,7 +39,7 @@ El proyecto consiste en diseñar y desarrollar un servidor web capaz de comunica
 
 * Comprender los diferentes niveles de abstracción en que deben expresarse las soluciones de problemas de diseño.
 
-## Contenidos del curso ##
+## Contenidos ##
 
 * Introducción/vistazo al diseño y arquitectura de software.
 
@@ -199,72 +220,3 @@ Connection: keep-alive
 
 * [Tipos MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 
-## Metodología ##
-
-* El proyecto se desarrollará en grupos de 5 personas.
-
-* El proyecto seguirá un proceso de desarrollo ágil; consistirá de dos iteraciones (*sprints*) de una semana cada uno. El tiempo de clase será utilizado como sesión de planificación y diseño (*sprint planning*) mientras que el tiempo extraclase se utilizará para ejecutar el diseño planificado. El producto de la sesión de planificación será una serie de tareas documentadas en el gestor de tareas asociado con el repositorio de código y asignadas a los miembros del equipo.
-
-* Cada miembro del equipo trabajará cada una de sus tareas en una rama (*branch*) aparte; se recomienda usar el formato `feature/<# tarea>` para nombrar las tareas. Para que una tarea se considere completa debe realizarse la programación así como las pruebas automatizadas correspondientes. Cuando la tarea es finalizada, se debe crear un *pull request* que deberá ser revisado y aprobado por otro miembro del equipo antes de fusionarla (*merge*) con la rama *master*. Cada miembro del equipo de revisar al menos un *pull request* por iteración. La revisión del *pull request* debe incluir asegurarse de que el código en esa rama compile correctamente y pase todas las pruebas automatizadas.
-
-* Además del código funcional y las pruebas automatizadas, se debe entregar la documentación del proyecto en el archivo `DOC.md`. La documentación debe incluir secciones que indiquen cómo configurar y construir el software, cómo ejecutar el software y cuál es el diseño del software incluyendo diagramas de clase, de secuencia o de actividad, acompañadas por explicaciones cuando se considere necesario.
-
-## Rúbrica ##
-
-### Planificación 1 (5 pts) ###
-
-* (5) Documenta y se asigna una o más tareas a desarrollar durante la iteración. Las tareas incluyen una descripción del trabajo a realizar así como los correspondientes artefactos de diseño.
-
-* (3) Documenta y se asigna una o más tareas a desarrollar durante la iteración. Algunas de las tareas no tienen una descripción adecuada o no incluyen artefactos de diseño.
-
-* (1) Documenta y se asigna una o más tareas a desarrollar durante la iteración. La mayoría de las tareas no tienen una descripción adecuada o no incluyen artefactos de diseño.
-
-### Desarrollo de tareas 1 (5 pts) ###
-
-* (5) Completa todas las tareas que le son asignadas.
-
-* (3) Completa la mayoría de las tareas que le son asignadas.
-
-* (1) No completa la mayoría de las tareas que le son asignadas.
-
-### Revisión de pares 1 (5 pts) ###
-
-* (5) Identifica oportunamente los problemas de calidad, estética y diseño. O reconoce adecuadamente la ausencia de problemas importantes de calidad, estética y diseño.
-
-* (3) Pasa por alto algunos problemas importantes de calidad, estética o diseño.
-
-* (1) Hace una revisión superficial pasando por alto la mayoría de problemas fundamentales relacionados con la completitud de la tarea o problemas de calidad, estética o diseño.
-
-### Planificación 2 (5 pts) ###
-
-* (5) Documenta y se asigna una o más tareas a desarrollar durante la iteración. Las tareas incluyen una descripción del trabajo a realizar así como los correspondientes artefactos de diseño.
-
-* (3) Documenta y se asigna una o más tareas a desarrollar durante la iteración. Algunas de las tareas no tienen una descripción adecuada o no incluyen artefactos de diseño.
-
-* (1) Documenta y se asigna una o más tareas a desarrollar durante la iteración. La mayoría de las tareas no tienen una descripción adecuada o no incluyen artefactos de diseño.
-
-### Desarrollo de tareas 2 (5 pts) ###
-
-* (5) Completa todas las tareas que le son asignadas.
-
-* (3) Completa la mayoría de las tareas que le son asignadas.
-
-* (1) No completa la mayoría de las tareas que le son asignadas.
-
-### Revisión de pares 2 (5 pts) ###
-
-* (5) Identifica oportunamente los problemas de calidad, estética y diseño. O reconoce adecuadamente la ausencia de problemas importantes de calidad, estética y diseño.
-
-* (3) Pasa por alto algunos problemas importantes de calidad, estética o diseño.
-
-* (1) Hace una revisión superficial pasando por alto la mayoría de problemas fundamentales relacionados con la completitud de la tarea o problemas de calidad, estética o diseño.
-
-### Documentación (5 pts) ###
-
-* (5) El proyecto cumple con todos los elementos de la documentación solicitada.
-
-* (3) El proyecto cumple con la mayoría de elementos de la documentación solicitada.
-
-* (1) El proyecto no cumple con la mayoría de elementos de la documentación solicitada.
-
-Total: **35 pts**
