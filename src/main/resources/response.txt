@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Server: byohttp/0.0.1
+Date: Tue, 10 Mar 2020 01:57:21 GMT
+Content-Type: text/html
+Content-Length: 95
+Last-Modified: Tue, 10 Mar 2020 01:57:00 GMT
+Connection: keep-alive
+Accept-Ranges: bytes
+
+<html>
+<head>
+<title>Hello world!</title>
+</head>
+<body>
+<h1>Hello world!</h1>
+</body>
+</html>

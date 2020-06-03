@@ -1,0 +1,7 @@
+GET /helloworld.html HTTP/1.1
+User-Agent: PostmanRuntime/7.22.0
+Accept: */*
+Cache-Control: no-cache
+Host: localhost
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
